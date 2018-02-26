@@ -1,3 +1,4 @@
+
 // Create an individual dictionary for each player
 
 var player1: [String: Any] = [
@@ -125,3 +126,39 @@ var player18: [String: Any] = [
     "Soccer Experience": true,
     "Guardian Name": "Hyman and Rachel Krustofski",
 ]
+
+// Add all players' dictionaries to 'players' array
+
+var players = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
+
+// Create empty arrays for experiencedPlayers and inexperiencedPlayers
+
+var experiencedPlayers = [[String: Any]]()
+
+var inexperiencedPlayers = [[String: Any]]()
+
+// Sort experiencedPlayers from inexperiencedPlayers
+
+for player in players{
+    
+    let isExperienced = player["Soccer Experience"]as! Bool
+    
+    if isExperienced {
+        // If player is experienced, add them to experiencedPlayers
+        experiencedPlayers.append(player)
+        
+    }
+    else if !isExperienced {
+        // If player is inexperienced, add them to inexperiencedPlayers
+        inexperiencedPlayers.append(player)
+        
+    }
+    
+}
+
+
+
+
+
+
+

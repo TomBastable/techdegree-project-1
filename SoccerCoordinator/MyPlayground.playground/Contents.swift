@@ -131,11 +131,45 @@ var player18: [String: Any] = [
 
 var players = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18]
 
+// Create Teams' Arrays
+
+var teamSharks = [[String: Any]]()
+var teamDragons = [[String: Any]]()
+var teamRaptors = [[String: Any]]()
+
 // Create empty arrays for experiencedPlayers and inexperiencedPlayers
 
 var experiencedPlayers = [[String: Any]]()
 
 var inexperiencedPlayers = [[String: Any]]()
+
+// Determine tallestPlayer and shortestPlayer (Attempting to 'Exceed expectations') - May not be needed, exploring multiple avenues to exceed expectations
+
+var tallestPlayer = 0
+var shortestPlayer = 0
+
+for player in players {
+    
+    //Determine this players height
+    let playerHeight = player["Height"]as! Int
+    
+    //If shortestPlayer is still initialised as 0, set it to current players height as a starting point
+    if shortestPlayer == 0 {
+        shortestPlayer = playerHeight
+    }
+    
+    if playerHeight > tallestPlayer {
+        tallestPlayer = playerHeight
+    }
+    
+    if playerHeight < shortestPlayer {
+        shortestPlayer = playerHeight
+    }
+    
+}
+
+print(tallestPlayer)
+print(shortestPlayer)
 
 // Sort experiencedPlayers from inexperiencedPlayers
 
@@ -153,8 +187,15 @@ for player in players{
         inexperiencedPlayers.append(player)
         
     }
-    
+
 }
+
+
+
+
+
+
+
 
 
 

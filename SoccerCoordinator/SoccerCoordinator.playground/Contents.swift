@@ -497,4 +497,6 @@ for player in teamRaptors {
     print(letter)
 }
 
+print(letters.count)
+
 // End Project 1!

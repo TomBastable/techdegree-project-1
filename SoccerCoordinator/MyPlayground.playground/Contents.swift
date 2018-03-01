@@ -235,7 +235,8 @@ for player in inexperiencedPlayers {
 }
 
 /*
- ------All code below is to balance the teams by Height, while keeping the experience balance in tact. This is to attempt the 'Exceeding Expectation' Mark--------
+ ------All code below is to balance the teams by Height, while keeping the experience balance in tact.
+ ------This is to attempt the 'Exceeding Expectation' Mark--------
  */
 
 /////If the Height Margin needs to change, change it here//////
@@ -472,11 +473,28 @@ print(teamsAverageHeight(team: teamSharks), teamsAverageHeight(team: teamDragons
 
 //----Printing forms to Guardians----\\
 
+//Initialise letters Array
 
+var letters: [String] = []
 
+// Loop each player in each team, apply their personal data to the letter template, print and add to the letters array as per instructions (Stated object type to avoid Optionals tag in console print).
 
+for player in teamSharks {
+    let letter = "FAO: \(player["Guardian Name"]as! String). Dear Sir / Madam - I'm writing to inform you that \(player["Name"]as! String) has been accepted into Team Sharks and the first practice is on March 17th at 3pm. Congratulations on being accepted into a team that prides itself on being evenly balanced by Experience AND height! Bring your boots and we'll see you there! Best, Tom"
+    letters.append(letter)
+    print(letter)
+}
 
+for player in teamDragons {
+    let letter = "FAO: \(player["Guardian Name"]as! String). Dear Sir / Madam - I'm writing to inform you that \(player["Name"]as! String) has been accepted into Team Dragons and the first practice is on March 17th at 1pm. Congratulations on being accepted into a team that prides itself on being evenly balanced by Experience AND height! Bring your boots and we'll see you there! Best, Tom"
+    letters.append(letter)
+    print(letter)
+}
 
+for player in teamRaptors {
+    let letter = "FAO: \(player["Guardian Name"]as! String). Dear Sir / Madam - I'm writing to inform you that \(player["Name"]as! String) has been accepted into Team Raptors and the first practice is on March 18th at 1pm. Congratulations on being accepted into a team that prides itself on being evenly balanced by Experience AND height! Bring your boots and we'll see you there! Best, Tom"
+    letters.append(letter)
+    print(letter)
+}
 
-
-
+// End Project 1!

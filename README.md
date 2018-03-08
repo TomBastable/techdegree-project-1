@@ -1,6 +1,8 @@
 # TechDegree Project 1 (iOS) | Soccer Co Ordinator
 
-Grade attempted: Exceeding Expectations (Height sorting logic included)
+Grade attempted: Exceeds Expectations (Height sorting logic included)
+
+Grade Achieved on 2/3/2018: Exceeds Expectations
 
 Project Spec:
 The project has three major parts. For each part, choose ONLY from the tools we have covered in the courses so far.
